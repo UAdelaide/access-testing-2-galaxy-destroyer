@@ -68,9 +68,10 @@
                         body: JSON.stringify({ bookID: this.selectedBookID, message: this.messageData })
                     });
                     alert('Message sent!');
+                    this.messageData='';
                 )
             }
-        })
+        }).mount('#app')
     </script>
 
 </body>
