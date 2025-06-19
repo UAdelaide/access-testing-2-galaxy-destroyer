@@ -21,7 +21,7 @@ router.get('/items', async(req,res) => {
 router.post('/messages', async (req,res) => {
     const {bookID, message} = req.body;
 
-    await db.query(``);
+    await db.query(`INSERT INTO messages (buyerID, sellerID, bookID, message)`);
 
 });
 
