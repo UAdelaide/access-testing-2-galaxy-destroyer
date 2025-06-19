@@ -25,7 +25,6 @@ router.post('/messages', async (req,res) => {
             [CURRENT_BUYER_ID, CURRENT_SELLER_ID, bookID,message]
         );
         res.status(201).json({ message: 'Sent message. '});
-        next();
 });
 
 
