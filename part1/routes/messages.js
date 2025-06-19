@@ -5,3 +5,5 @@ var db = require('../db');
 var CURRENT_BUYER_ID = 1;
 var CURRENT_SELLER_ID = 2;
 
+
+// routes to create for api: 1. for items, 2. post messages, 3. get messages
