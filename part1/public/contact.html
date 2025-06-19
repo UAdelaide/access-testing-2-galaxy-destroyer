@@ -51,6 +51,9 @@
             // we use this mounted() so that when we start app, it runs the items api and the fetch for /messages
             async mounted() {
                 const itemsRes = await fetch('/api/items');
+                this.items = await itemsRes.json();
+
+                const messagesRes
             }
         })
     </script>
