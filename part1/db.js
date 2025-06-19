@@ -8,4 +8,8 @@ const db = mysql.createPool({
     database: 'bookMarketplace'
 });
 
+db.getConnection()
+  .then(() => console.log('✅ MySQL pool connected'))
+  .catch(err => console.error('❌ MySQL connection error:', err));
+
 module.exports = db;
