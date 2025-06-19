@@ -29,7 +29,7 @@ router.post('/messages', async (req,res) => {
 
 router.get('/messages', async (req,res) => {
     const [rows] = await db.query(
-        
+        `SELECT m.messageData, m.timeSent`
     );
 });
 
