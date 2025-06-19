@@ -11,7 +11,7 @@
     <div id="app">
     <h1>Contact Seller</h1>
 
-    <select v-model="selectedBookID">
+    <select v-model="selectedItem">
         <option disabled value="">* Select A Book *</option>
         <option v-for="item in items" :value="item.bookID">
             {{ item.title }} (Seller: {{ item.sellerName }})
@@ -42,7 +42,7 @@
             data() {
                 return {
                     items: [],
-                    selectedItem: NULL,
+                    selectedItem: null,
                     messageData: '',
                     messages: []
                 };
