@@ -27,5 +27,6 @@ router.post('/messages', async (req,res) => {
         res.status(201).json({ message: 'Sent message. '});
 });
 
+router.get()
 
 module.exports = router;
