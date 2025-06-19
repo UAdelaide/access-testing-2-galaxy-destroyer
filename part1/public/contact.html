@@ -19,7 +19,7 @@
     </select>
 
     <textarea v-model="messageData" placeholder="Write your message..."></textarea>
-    <button @click="sendMessage">Send Message</button>
+    <button type="button" @click="sendMessage">Send Message</button>
 
     <h2>Messages received:</h2>
     <li v-for="msg in messages">
