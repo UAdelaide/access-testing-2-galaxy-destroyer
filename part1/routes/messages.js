@@ -12,5 +12,6 @@ router.get('/items', async(req,res) => {
     const [rows] = await db.query(`
         SELECT bl.bookID, b1.title, u.name AS sellerName
         FROM bookstatus bl
-        JOIN bookinfo `)
+        JOIN bookinfo bi ON b1.bookinfoID = bi.bookinfoID
+        JOIN users u ON bl`)
 });
