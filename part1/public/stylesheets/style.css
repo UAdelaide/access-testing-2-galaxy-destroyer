@@ -9,5 +9,8 @@ a {
 
 body {
   font-family: sans-serif;
-  max-width: ;
+  max-width: 600px;
+  margin:auto;
 }
+
+select, 
