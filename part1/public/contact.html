@@ -13,7 +13,7 @@
 
     <select v-model="selectedItem">
         <option disabled value="">* Select A Book *</option>
-        <option v-for="item in items" :value="item.bookID">
+        <option v-for="item in items" :value="item">
             {{ item.title }} (Seller: {{ item.sellerName }})
         </option>
     </select>
