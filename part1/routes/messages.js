@@ -31,7 +31,8 @@ router.get('/messages', async (req,res) => {
     const [rows] = await db.query(
         `SELECT m.messageData, m.timeSent, bi.title,u.name AS BuyerName
         FROM messages m
-        JOIN bookstatus bl ON m.bookID`
+        JOIN bookstatus bl ON m.bookID = bl.bookID
+        JOIN bookinfo bi ON bl.bookinfoID = b`
     );
 });
 
