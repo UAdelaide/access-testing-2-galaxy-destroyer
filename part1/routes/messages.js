@@ -21,8 +21,7 @@ router.get('/items', async(req,res) => {
 router.post('/messages', async (req,res) => {
     const {bookID, message} = req.body;
 
-    await db.query(`INSERT INTO messages (buyerID, sellerID, bookID, messageData, timeSent)
-            VALUES (? ? ? ? NOW())`,
+    await db.query(`INSERT INTO messages (buyerID, sellerID, bookID, messageData, timeSent) VALUES (? ? ? ? NOW())`,
             [CURRENT_BUYER_ID, CURRENT_SELLER_ID, bookID,message]
         );
         res.status(201).json({ message: 'Sent message. '});
