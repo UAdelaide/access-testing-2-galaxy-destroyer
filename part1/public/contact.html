@@ -53,7 +53,8 @@
                 const itemsRes = await fetch('/api/items');
                 this.items = await itemsRes.json();
 
-                const messagesRes
+                const messagesRes = await fetch('/api/messages');
+                this.messages = await messagesRes
             }
         })
     </script>
