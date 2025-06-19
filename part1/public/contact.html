@@ -13,7 +13,9 @@
 
     <select v-model="selectedBookID">
         <option disabled value="">* Select A Book *</option>
-        <option v-for=""></option>
+        <option v-for="item in items" :value="item.bookID">
+            
+        </option>
     </select>
 </body>
 </html>
