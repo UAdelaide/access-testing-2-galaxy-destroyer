@@ -35,7 +35,7 @@ router.get('/messages', async (req,res) => {
         JOIN bookinfo bi ON bl.bookinfoID = bi.bookinfoID
         JOIN users u ON m.buyerID = u.userID
         WHERE m.sellerID = ?
-        ORDER BY m.timeSet DESC`,
+        ORDER BY m.timeSent DESC`,
         [CURRENT_SELLER_ID]
     );
     res.json(rows);
