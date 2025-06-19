@@ -33,7 +33,9 @@ router.get('/messages', async (req,res) => {
         FROM messages m
         JOIN bookstatus bl ON m.bookID = bl.bookID
         JOIN bookinfo bi ON bl.bookinfoID = bi.bookinfoID
-        JOIN users u ON m.buyerID = u`
+        JOIN users u ON m.buyerID = u.userID
+        WHERE m.sellerID = ?
+        ORDER BY m.timeSet DESC`
     );
 });
 
