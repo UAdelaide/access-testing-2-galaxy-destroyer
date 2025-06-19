@@ -22,6 +22,7 @@
     <button type="button" @click="sendMessage">Send Message</button>
 
     <h2>Messages received:</h2>
+    <ul></ul>
     <li v-for="msg in messages">
         <strong> {{ msg.buyerName }} </strong>
         about
@@ -40,8 +41,10 @@
             data() {
                 return {
                     items: [],
-                    selectedBookId
-                }
+                    selectedBookId: '',
+                    messageData: '',
+                    messages: []
+                };
             }
         })
     </script>
