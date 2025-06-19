@@ -63,7 +63,7 @@
                        return alert('Pls send book & enter msg!');
                     }
                     await fetch('/api/messages',{
-                        method: POST,
+                        method: 'POST',
                         headers: {'Content-Type':'application/json'},
                         body: JSON.stringify({ bookID: this.selectedBookID, message: this.messageData })
                     });
