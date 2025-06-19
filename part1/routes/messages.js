@@ -10,5 +10,7 @@ var CURRENT_SELLER_ID = 2;
 
 router.get('/items', async(req,res) => {
     const [rows] = await db.query(`
-        SELECT bl.bookID, b1.title, `)
+        SELECT bl.bookID, b1.title, u.name AS sellerName
+        FROM bookstatus bl
+        JOIN bookinfo `)
 });
